@@ -1,0 +1,8 @@
+.home {
+  background-color: #212121;
+  height: 100vh;
+}
+
+.home__body{
+    height: 100%;
+}

@@ -1,6 +1,8 @@
 import React from "react";
 import "./Home.css";
 import Header from "./Header";
+import GameCards from "./GameCards";
+import AdvertBuild from "./AdvertBuild";
 
 function Home() {
   return (
@@ -8,7 +10,10 @@ function Home() {
       <div className="home__header">
         <Header />
       </div>
-      <div className="home__body">I am body</div>
+      <div className="home__body">
+        <GameCards />
+        <AdvertBuild />
+      </div>
     </div>
   );
 }
