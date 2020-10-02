@@ -1,4 +1,8 @@
 .gamecards {
-  background-color: red;
-  height: 40%;
+  background-color: #282838;
+  height: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  overflow: hidden;
+  flex-wrap: wrap;
 }

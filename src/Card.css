@@ -1,0 +1,28 @@
+.card {
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 40px;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card__body {
+  box-shadow: 1px 1px 10px black;
+  object-fit: scale-down;
+}
+.card__body:hover {
+  filter: blur(2px);
+}
+.card__body > img {
+  height: 0%;
+}
+.card__title > * {
+  color: white;
+  font-weight: 400;
+  text-align: center;
+  font-size: x-large;
+}
