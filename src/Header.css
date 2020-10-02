@@ -2,4 +2,29 @@
   background-color: #12131e;
   color: white;
   display: flex;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.header__left {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.header__logo > * {
+  font-weight: 400;
+  margin-left: 20px;
+}
+
+.header__logo > h1 > span {
+  color: rgb(255, 106, 130);
+}
+
+.header__right {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 20px;
+}
+
+.MuiSvgIcon-root{
+    color: white !important;
 }
