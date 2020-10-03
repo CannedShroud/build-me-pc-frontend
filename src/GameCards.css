@@ -1,6 +1,5 @@
 .gamecards {
   background-color: #282838;
-  height: 60%;
   display: flex;
   justify-content: space-evenly;
   overflow: hidden;

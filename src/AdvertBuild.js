@@ -4,7 +4,9 @@ import "./AdvertBuild.css";
 function AdvertBuild() {
   return (
     <div className="advertbuild">
-      <h1>I am the build page advertiser</h1>
+      <div className="advertbuild__button">
+        <h1>SHOW ME THEM BUILDS</h1>
+      </div>
     </div>
   );
 }

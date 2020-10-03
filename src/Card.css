@@ -17,9 +17,6 @@
 .card__body:hover {
   filter: blur(2px);
 }
-.card__body > img {
-  height: 0%;
-}
 .card__title > * {
   color: white;
   font-weight: 400;
