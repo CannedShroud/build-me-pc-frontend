@@ -1,4 +1,16 @@
-.build{
-    background-color: #282838;
-    height: 100vh;
+.build {
+  background-color: #282838;
+}
+.build__body {
+  height: 100%;
+  width: 100%;
+}
+
+.build__cards {
+  margin: auto;
+  width: 90%;
+  height: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }

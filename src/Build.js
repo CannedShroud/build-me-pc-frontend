@@ -1,6 +1,7 @@
 import React from "react";
 import "./Build.css";
 import Header from "./Header";
+import BuildCard from "./BuildCard";
 
 function Build() {
   return (
@@ -9,8 +10,11 @@ function Build() {
         <Header />
       </div>
       <div className="build__body">
-        {/* BuildCard */}
-        {/* BuildCard */}
+        <div className="build__cards">
+          <BuildCard />
+          <BuildCard />
+          <BuildCard />
+        </div>
       </div>
     </div>
   );
