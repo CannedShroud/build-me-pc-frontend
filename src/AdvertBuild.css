@@ -17,4 +17,5 @@
 .advertbuild__button > * {
   text-align: center;
   color: thistle;
+  text-decoration: none;
 }
