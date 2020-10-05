@@ -1,0 +1,41 @@
+.part {
+  color: white;
+  margin: 50px;
+  margin-bottom: 30px;
+  height: 200px;
+}
+.part__title {
+  display: flex;
+  margin: 10px;
+  margin-left: 0;
+}
+.part__line {
+  border: 1px solid blue;
+  background-color: blue;
+  width: 100%;
+  margin: 10px;
+}
+
+.part__body {
+  display: flex;
+  height: 100px;
+}
+.part__body > h3 {
+  margin: auto;
+  font-weight: 400;
+  margin-left: 10%;
+}
+
+.part__image {
+  width: 100px;
+  object-fit: contain;
+}
+
+.part__details {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  padding-left: 0;
+  position: relative;
+  left: 0;
+}

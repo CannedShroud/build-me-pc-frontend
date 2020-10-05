@@ -2,6 +2,7 @@ import React from "react";
 import "./Build.css";
 import Header from "./Header";
 import BuildCard from "./BuildCard";
+import BuildElab from "./BuildElab";
 
 function Build() {
   return (
@@ -14,6 +15,11 @@ function Build() {
           <BuildCard />
           <BuildCard />
           <BuildCard />
+        </div>
+        <div className="build__featured">
+          <h1>Featured Build</h1>
+          <hr />
+          <BuildElab/>
         </div>
       </div>
     </div>
