@@ -1,26 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./BuildElab";
 import Part from "./Part";
-import db from "./firebase";
+import Brain from "./Brain";
 
 function BuildElab() {
-  const [spec, setSpec] = useState({});
-  useEffect(() => {
-    db.collection("builds")
-      .doc("value")
-      .get()
-      .then((doc) => {
-        if (doc.exists) {
-          setSpec(doc.data());
-        } else {
-          console.log("No such document");
-        }
-      })
-      .catch((error) => {
-        console.log("Error getting document: ", error);
-      });
-  }, []);
-
+  const build = Brain();
   return (
     <div className="buildelab">
       <h1>The Value King</h1>
@@ -33,60 +17,60 @@ function BuildElab() {
       <hr />
       <Part
         part="CPU"
-        name={spec.cpu?.name}
-        detail2={`Clockspeed: ${spec.cpu?.clocks} GHz`}
-        company={spec.cpu?.company}
-        detail1={`Compute: ${spec.cpu?.cores}C/${
-          spec.cpu?.smt ? spec.cpu?.cores * 2 : spec.cpu?.cores
+        name={build.cpu?.name}
+        detail2={`Clockspeed: ${build.cpu?.clocks} GHz`}
+        company={build.cpu?.company}
+        detail1={`Compute: ${build.cpu?.cores}C/${
+          build.cpu?.smt ? build.cpu?.cores * 2 : build.cpu?.cores
         }T`}
-        img={spec.cpu?.img}
+        img={build.cpu?.img}
       />
 
       <Part
         part="Motherboard"
-        name={spec.mbd?.name}
-        detail1={`Sata Ports: ${spec.mbd?.sataports}`}
-        detail2={`Ram slots: ${spec.mbd?.ramslots}`}
-        company={spec.mbd?.company}
-        img={spec.mbd?.img}
+        name={build.mbd?.name}
+        detail1={`Sata Ports: ${build.mbd?.sataports}`}
+        detail2={`Ram slots: ${build.mbd?.ramslots}`}
+        company={build.mbd?.company}
+        img={build.mbd?.img}
       />
       <Part
         part="RAM"
-        name={spec.dram?.name}
-        detail1={`Size: ${spec.dram?.size} GB (${spec.dram?.config})`}
-        detail2={`Speed: ${spec.dram?.speed} Mhz`}
-        company={spec.dram?.company}
-        img={spec.dram?.img}
+        name={build.dram?.name}
+        detail1={`Size: ${build.dram?.size} GB (${build.dram?.config})`}
+        detail2={`Speed: ${build.dram?.speed} Mhz`}
+        company={build.dram?.company}
+        img={build.dram?.img}
       />
       <Part
         part="Storage"
-        name={spec.ssd?.name}
-        detail1={`Size: ${spec.ssd?.capacity} GB`}
-        detail2={`Type: ${spec.ssd?.type}`}
-        company={spec.ssd?.company}
-        img={spec.ssd?.img}
+        name={build.ssd?.name}
+        detail1={`Size: ${build.ssd?.capacity} GB`}
+        detail2={`Type: ${build.ssd?.type}`}
+        company={build.ssd?.company}
+        img={build.ssd?.img}
       />
       <Part
         part="GPU"
-        name={spec.gpu?.name}
-        detail1={`VRAM: ${spec.gpu?.vram} GB`}
-        detail2={`Bus: ${spec.gpu?.bus} bit`}
-        company={spec.gpu?.aib}
-        img={spec.gpu?.img}
+        name={build.gpu?.name}
+        detail1={`VRAM: ${build.gpu?.vram} GB`}
+        detail2={`Bus: ${build.gpu?.bus} bit`}
+        company={build.gpu?.aib}
+        img={build.gpu?.img}
       />
       <Part
         part="Case"
-        name={spec.case?.name}
-        company={spec.case?.company}
-        img={spec.case?.img}
+        name={build.case?.name}
+        company={build.case?.company}
+        img={build.case?.img}
       />
       <Part
         part="PowerSupply"
-        name={spec.psu?.name}
-        detail1={`Wattage: ${spec.psu?.wattage}W`}
-        detail2={`Efficiency: ${spec.psu?.rating} rated`}
-        company={spec.psu?.company}
-        img={spec.psu?.img}
+        name={build.psu?.name}
+        detail1={`Wattage: ${build.psu?.wattage}W`}
+        detail2={`Efficiency: ${build.psu?.rating} rated`}
+        company={build.psu?.company}
+        img={build.psu?.img}
       />
     </div>
   );
