@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/dental-studio-gds/static/css/main.c3590bb5.chunk.css",
+    "main.js": "/dental-studio-gds/static/js/main.2b4db2f9.chunk.js",
+    "main.js.map": "/dental-studio-gds/static/js/main.2b4db2f9.chunk.js.map",
+    "runtime-main.js": "/dental-studio-gds/static/js/runtime-main.cac05824.js",
+    "runtime-main.js.map": "/dental-studio-gds/static/js/runtime-main.cac05824.js.map",
+    "static/js/2.0aeb6cc0.chunk.js": "/dental-studio-gds/static/js/2.0aeb6cc0.chunk.js",
+    "static/js/2.0aeb6cc0.chunk.js.map": "/dental-studio-gds/static/js/2.0aeb6cc0.chunk.js.map",
+    "index.html": "/dental-studio-gds/index.html",
+    "precache-manifest.cc665ab7fd1554b2aa93b26513841c74.js": "/dental-studio-gds/precache-manifest.cc665ab7fd1554b2aa93b26513841c74.js",
+    "service-worker.js": "/dental-studio-gds/service-worker.js",
+    "static/css/main.c3590bb5.chunk.css.map": "/dental-studio-gds/static/css/main.c3590bb5.chunk.css.map",
+    "static/js/2.0aeb6cc0.chunk.js.LICENSE.txt": "/dental-studio-gds/static/js/2.0aeb6cc0.chunk.js.LICENSE.txt",
+    "static/media/demopc.png": "/dental-studio-gds/static/media/demopc.01149f4a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cac05824.js",
+    "static/js/2.0aeb6cc0.chunk.js",
+    "static/css/main.c3590bb5.chunk.css",
+    "static/js/main.2b4db2f9.chunk.js"
+  ]
+}
