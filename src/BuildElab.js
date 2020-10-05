@@ -7,11 +7,11 @@ function BuildElab() {
   const build = Brain();
   return (
     <div className="buildelab">
-      <h1>The Value King</h1>
+      <h1>{build.details?.name}</h1>
       <hr />
       <h2>Scores</h2>
-      <h3>Cinebench: 1320</h3>
-      <h3>3D Mark: 2000</h3>
+      <h3>{`Cinebench: ${build.benchmarks?.cinebench}`}</h3>
+      <h3>{`3D Mark(Time Spy) ${build.benchmarks?.threeDMarkTSpy}`}</h3>
       <hr />
       <h2>Part List</h2>
       <hr />
