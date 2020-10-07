@@ -3,8 +3,8 @@ import "./BuildElab.css";
 import Part from "./Part";
 import Brain from "./Brain";
 
-function BuildElab() {
-  const build = Brain();
+function BuildElab({id}) {
+  const build = Brain(id);
   return (
     <div className="buildelab">
       <div className="buildelab__titles">

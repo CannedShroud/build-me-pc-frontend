@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import db from "./firebase";
 
-function Brain() {
+function Brain(id) {
   const [build, setBuild] = useState({});
   useEffect(() => {
     db.collection("builds")
-      .doc("value")
+      .doc(id ? id : "value")
       .get()
       .then((doc) => {
         if (doc.exists) {

@@ -20,7 +20,7 @@ function Build() {
           <h1>
             Featured <span>Build</span>
           </h1>
-          <BuildElab />
+          <BuildElab id="valueIntel"/>
         </div>
       </div>
     </div>
