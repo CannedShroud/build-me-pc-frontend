@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "db44b47e829c2af1a51c1d8a11e09f0e",
+    "revision": "49caeebc2345a6ba047bb2afc19ba069",
     "url": "/build-me-pc-frontend/index.html"
   },
   {
-    "revision": "5cc299201e87fb1b4314",
-    "url": "/build-me-pc-frontend/static/css/main.8d655af3.chunk.css"
+    "revision": "fc85f5ce98e3c048baab",
+    "url": "/build-me-pc-frontend/static/css/main.a11327b1.chunk.css"
   },
   {
     "revision": "918f73f303f38bb322dd",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/build-me-pc-frontend/static/js/2.6bf23434.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5cc299201e87fb1b4314",
+    "revision": "fc85f5ce98e3c048baab",
     "url": "/build-me-pc-frontend/static/js/main.d3786e2c.chunk.js"
   },
   {
