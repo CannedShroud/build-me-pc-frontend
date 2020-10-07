@@ -19,3 +19,7 @@
   color: thistle;
   text-decoration: none;
 }
+
+.advertbuild:hover{
+  cursor:pointer;
+}
