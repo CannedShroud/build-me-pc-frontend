@@ -8,7 +8,6 @@
 
 .card:hover {
   transform: scale(1.1);
-  cursor: alias;
 }
 
 .card__body {
@@ -17,6 +16,7 @@
 }
 .card__body:hover {
   filter: blur(2px);
+  animation: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 .card__title > * {
   color: white;
