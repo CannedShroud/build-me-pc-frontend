@@ -1,29 +1,31 @@
 .part {
   color: white;
-  margin: 50px;
-  margin-bottom: 30px;
-  height: 200px;
+  margin-bottom: 50px;
+  min-height: 200px;
 }
 .part__title {
   display: flex;
   margin: 10px;
   margin-left: 0;
+  font-size: x-large;
 }
 .part__line {
   border: 1px solid blue;
   background-color: blue;
   width: 100%;
-  margin: 10px;
+  margin: 17px;
 }
 
 .part__body {
   display: flex;
+  justify-content: space-around;
   height: 100px;
 }
 .part__body > h3 {
   margin: auto;
-  font-weight: 400;
+  font-weight: 600;
   margin-left: 10%;
+  font-size: large;
 }
 
 .part__image {
@@ -39,3 +41,4 @@
   position: relative;
   left: 0;
 }
+

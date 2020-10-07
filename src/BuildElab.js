@@ -1,5 +1,5 @@
 import React from "react";
-import "./BuildElab";
+import "./BuildElab.css";
 import Part from "./Part";
 import Brain from "./Brain";
 
@@ -7,71 +7,85 @@ function BuildElab() {
   const build = Brain();
   return (
     <div className="buildelab">
-      <h1>{build.details?.name}</h1>
-      <hr />
-      <h2>Scores</h2>
-      <h3>{`Cinebench: ${build.benchmarks?.cinebench}`}</h3>
-      <h3>{`3D Mark(Time Spy) ${build.benchmarks?.threeDMarkTSpy}`}</h3>
-      <hr />
-      <h2>Part List</h2>
-      <hr />
-      <Part
-        part="CPU"
-        name={build.cpu?.name}
-        detail2={`Clockspeed: ${build.cpu?.clocks} GHz`}
-        company={build.cpu?.company}
-        detail1={`Compute: ${build.cpu?.cores}C/${
-          build.cpu?.smt ? build.cpu?.cores * 2 : build.cpu?.cores
-        }T`}
-        img={build.cpu?.img}
-      />
-
-      <Part
-        part="Motherboard"
-        name={build.mbd?.name}
-        detail1={`Sata Ports: ${build.mbd?.sataports}`}
-        detail2={`Ram slots: ${build.mbd?.ramslots}`}
-        company={build.mbd?.company}
-        img={build.mbd?.img}
-      />
-      <Part
-        part="RAM"
-        name={build.dram?.name}
-        detail1={`Size: ${build.dram?.size} GB (${build.dram?.config})`}
-        detail2={`Speed: ${build.dram?.speed} Mhz`}
-        company={build.dram?.company}
-        img={build.dram?.img}
-      />
-      <Part
-        part="Storage"
-        name={build.ssd?.name}
-        detail1={`Size: ${build.ssd?.capacity} GB`}
-        detail2={`Type: ${build.ssd?.type}`}
-        company={build.ssd?.company}
-        img={build.ssd?.img}
-      />
-      <Part
-        part="GPU"
-        name={build.gpu?.name}
-        detail1={`VRAM: ${build.gpu?.vram} GB`}
-        detail2={`Bus: ${build.gpu?.bus} bit`}
-        company={build.gpu?.aib}
-        img={build.gpu?.img}
-      />
-      <Part
-        part="Case"
-        name={build.case?.name}
-        company={build.case?.company}
-        img={build.case?.img}
-      />
-      <Part
-        part="PowerSupply"
-        name={build.psu?.name}
-        detail1={`Wattage: ${build.psu?.wattage}W`}
-        detail2={`Efficiency: ${build.psu?.rating} rated`}
-        company={build.psu?.company}
-        img={build.psu?.img}
-      />
+      <div className="buildelab__titles">
+        <h1>{build.details?.name}</h1>
+        <div className="buildelab__scores">
+          <h2>Scores</h2>
+          <h3>Cinebench: <span>{build.benchmarks?.cinebench}</span></h3>
+          <h3>3D Mark(Time Spy): <span>{build.benchmarks?.threeDMarkTSpy}</span></h3>
+        </div>
+        <h2>Part List</h2>
+      </div>
+      <div className="buildelab__parts">
+        <Part
+          part="CPU"
+          img={build.cpu?.img}
+          name={build.cpu?.name}
+          title1="Compute:"
+          detail1={`${build.cpu?.cores}C/${
+            build.cpu?.smt ? build.cpu?.cores * 2 : build.cpu?.cores
+          }T`}
+          title2="Clockspeed:"
+          detail2={`${build.cpu?.clocks} GHz`}
+          company={build.cpu?.company}
+        />
+        <Part
+          part="Motherboard"
+          name={build.mbd?.name}
+          title1="Sata Ports:"
+          detail1={build.mbd?.sataports}
+          title2="Ram Slots:"
+          detail2={build.mbd?.ramslots}
+          company={build.mbd?.company}
+          img={build.mbd?.img}
+        />
+        <Part
+          part="RAM"
+          name={build.dram?.name}
+          title1="Size:"
+          detail1={`${build.dram?.size} GB (${build.dram?.config})`}
+          title2="Speed:"
+          detail2={`${build.dram?.speed} Mhz`}
+          company={build.dram?.company}
+          img={build.dram?.img}
+        />
+        <Part
+          part="Storage"
+          name={build.ssd?.name}
+          title1="Capacity:"
+          detail1={`${build.ssd?.capacity} GB`}
+          title2="Type:"
+          detail2={build.ssd?.type}
+          company={build.ssd?.company}
+          img={build.ssd?.img}
+        />
+        <Part
+          part="GPU"
+          name={build.gpu?.name}
+          title1="VRAM:"
+          detail1={`${build.gpu?.vram} GB`}
+          title2="Bus"
+          detail2={`${build.gpu?.bus} bit`}
+          company={build.gpu?.aib}
+          img={build.gpu?.img}
+        />
+        <Part
+          part="Case"
+          name={build.case?.name}
+          company={build.case?.company}
+          img={build.case?.img}
+        />
+        <Part
+          part="PowerSupply"
+          name={build.psu?.name}
+          title1="Wattage:"
+          detail1={`${build.psu?.wattage}W`}
+          title2="Efficiency:"
+          detail2={build.psu?.rating}
+          company={build.psu?.company}
+          img={build.psu?.img}
+        />
+      </div>
     </div>
   );
 }

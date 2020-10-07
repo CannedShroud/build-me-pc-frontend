@@ -1,3 +1,19 @@
 .buildelab {
-  margin: 40px;
+  margin: 20px;
+  color: white;
+  padding: 40px;
 }
+
+.buildelab > h1 {
+  font-size: 45px;
+}
+
+.buildelab__titles{
+  border-bottom: 1px solid white;
+  margin-bottom: 30px;
+}
+
+.buildelab__titles > * {
+  margin-bottom: 30px;
+}
+

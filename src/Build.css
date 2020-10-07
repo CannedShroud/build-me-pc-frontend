@@ -14,3 +14,12 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
+
+.build__featured > h1 {
+  font-size: 50px;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  padding: 40px;
+}

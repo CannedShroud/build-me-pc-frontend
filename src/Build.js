@@ -17,9 +17,10 @@ function Build() {
           <BuildCard />
         </div>
         <div className="build__featured">
-          <h1>Featured Build</h1>
-          <hr />
-          <BuildElab/>
+          <h1>
+            Featured <span>Build</span>
+          </h1>
+          <BuildElab />
         </div>
       </div>
     </div>
