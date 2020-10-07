@@ -1,3 +1,4 @@
+import { Button } from "@material-ui/core";
 import React from "react";
 import "./Part.css";
 
@@ -11,6 +12,7 @@ function Part({
   company,
   title1,
   title2,
+  link,
 }) {
   return (
     <div className="part">
@@ -26,7 +28,7 @@ function Part({
         <div className="part__price">
           <div className="part__price">
             <span>Price: </span>
-          <p>$199.99</p>
+            <p>{price}</p>
           </div>
         </div>
         <div className="part__groupOne">
@@ -41,6 +43,9 @@ function Part({
           <span>Company: </span>
           <p>{company}</p>
         </div>
+        <Button href={link} color="primary" className="part__buyBtn">
+          BUY
+        </Button>
       </div>
     </div>
   );
