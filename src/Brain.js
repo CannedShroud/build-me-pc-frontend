@@ -5,7 +5,7 @@ function Brain(id) {
   const [build, setBuild] = useState({});
   useEffect(() => {
     db.collection("builds")
-      .doc(id ? id : "value")
+      .doc(id)
       .get()
       .then((doc) => {
         if (doc.exists) {
@@ -17,7 +17,7 @@ function Brain(id) {
       .catch((error) => {
         console.log("Error getting document: ", error);
       });
-  }, []);
+  }, [id]);
   return build;
 }
 

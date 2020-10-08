@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./BuildElab.css";
 import Part from "./Part";
 import Brain from "./Brain";
 
-function BuildElab({id}) {
-  const build = Brain(id);
+function BuildElab({ id }) {
+  const [buildId, setBuildId] = useState(id);
+
+  let build = Brain(buildId);
+
+  useEffect(() => {
+    setBuildId(id);
+  }, [id]);
+  
   return (
     <div className="buildelab">
       <div className="buildelab__titles">
@@ -31,9 +38,9 @@ function BuildElab({id}) {
           }T`}
           title2="Clockspeed:"
           detail2={`${build.cpu?.clocks} GHz`}
-          price="$399"
           link={build.cpu?.link}
           company={build.cpu?.company}
+          price={build.cpu?.price}
         />
         <Part
           part="Motherboard"
@@ -42,7 +49,7 @@ function BuildElab({id}) {
           detail1={build.mbd?.sataports}
           title2="Ram Slots:"
           detail2={build.mbd?.ramslots}
-          price="$399"
+          price={build.mbd?.price}
           link={build.mbd?.link}
           company={build.mbd?.company}
           img={build.mbd?.img}
@@ -54,7 +61,7 @@ function BuildElab({id}) {
           detail1={`${build.dram?.size} GB (${build.dram?.config})`}
           title2="Speed:"
           detail2={`${build.dram?.speed} Mhz`}
-          price="$399"
+          price={build.dram?.price}
           link={build.dram?.link}
           company={build.dram?.company}
           img={build.dram?.img}
@@ -66,7 +73,7 @@ function BuildElab({id}) {
           detail1={`${build.ssd?.capacity} GB`}
           title2="Type:"
           detail2={build.ssd?.type}
-          price="$399"
+          price={build.ssd?.price}
           link={build.ssd?.link}
           company={build.ssd?.company}
           img={build.ssd?.img}
@@ -78,7 +85,7 @@ function BuildElab({id}) {
           detail1={`${build.gpu?.vram} GB`}
           title2="Bus"
           detail2={`${build.gpu?.bus} bit`}
-          price="$399"
+          price={build.gpu?.price}
           link={build.gpu?.link}
           company={build.gpu?.aib}
           img={build.gpu?.img}
@@ -86,7 +93,7 @@ function BuildElab({id}) {
         <Part
           part="Case"
           name={build.case?.name}
-          price="$399"
+          price={build.case?.price}
           link={build.case?.link}
           company={build.case?.company}
           img={build.case?.img}
@@ -98,7 +105,7 @@ function BuildElab({id}) {
           detail1={`${build.psu?.wattage}W`}
           title2="Efficiency:"
           detail2={build.psu?.rating}
-          price="$399"
+          price={build.psu?.price}
           link={build.psu?.link}
           company={build.psu?.company}
           img={build.psu?.img}

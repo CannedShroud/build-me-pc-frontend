@@ -26,10 +26,8 @@ function Part({
       </div>
       <div className="part__details">
         <div className="part__price">
-          <div className="part__price">
-            <span>Price: </span>
-            <p>{price}</p>
-          </div>
+          <span>Price: </span>
+          <p>{price}</p>
         </div>
         <div className="part__groupOne">
           <span>{title1}</span>
