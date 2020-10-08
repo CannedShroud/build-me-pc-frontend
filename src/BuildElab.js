@@ -1,18 +1,15 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./BuildElab.css";
 import Part from "./Part";
 import Brain from "./Brain";
 
 function BuildElab({ id }) {
   const [buildId, setBuildId] = useState(id);
-
   let build = Brain(buildId);
-
   useEffect(() => {
     setBuildId(id);
   }, [id]);
-  
-  return (
+    return (
     <div className="buildelab">
       <div className="buildelab__titles">
         <h1>{build.details?.name}</h1>

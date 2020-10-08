@@ -4,10 +4,11 @@
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+  --secondary: #ff6a82;
 }
 
 span {
-  color: rgb(255, 106, 130);
+  color: var(--secondary);
   margin: 10px, 0px;
   font-family: "Fira Sans";
 }
