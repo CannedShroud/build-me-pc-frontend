@@ -12,9 +12,9 @@ function Build() {
       </div>
       <div className="build__body">
         <div className="build__cards">
-          <BuildCard />
-          <BuildCard />
-          <BuildCard />
+          <BuildCard docId="value"/>
+          <BuildCard docId="valueIntel"/>
+          <BuildCard docId="value"/>
         </div>
         <div className="build__featured">
           <h1>

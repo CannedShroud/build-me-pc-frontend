@@ -1,9 +1,35 @@
 .buildcard {
-  background-color: #b4b4b4;
+  background-color: white;
   margin: 40px;
   padding: 20px;
 }
 
-.buildcard:hover{
+.buildcard:hover {
   cursor: pointer;
+}
+
+.buildcard__image {
+  display: flex;
+  justify-content: space-between;
+  height: 300px;
+  width: 400px;
+}
+
+.buildcard__case{
+  object-fit: contain;
+  height: 50%;
+  margin: auto;
+}
+
+.buildcard__partsImg {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  height: 90%;
+}
+
+.buildcard__partsImg > img {
+  height: 50%;
+  object-fit: contain;
+  padding: 10px;
 }
