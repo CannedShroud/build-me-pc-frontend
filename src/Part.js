@@ -1,5 +1,6 @@
 import { Button } from "@material-ui/core";
 import React from "react";
+import { ScaleLoader } from "react-spinners";
 import "./Part.css";
 
 function Part({
@@ -14,6 +15,13 @@ function Part({
   title2,
   link,
 }) {
+  if (name === undefined) {
+    return (
+      <div className="part part__loading">
+        <ScaleLoader size={250} color={"#FF6A82"} />
+      </div>
+    );
+  }
   return (
     <div className="part">
       <div className="part__title">

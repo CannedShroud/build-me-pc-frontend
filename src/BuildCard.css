@@ -4,6 +4,8 @@
   border: 5px solid;
   margin: 40px;
   padding: 20px;
+  min-width: 400px;
+  min-height: 400px;
 }
 
 .buildcard:hover {
@@ -17,7 +19,7 @@
   width: 400px;
 }
 
-.buildcard__case{
+.buildcard__case {
   object-fit: contain;
   height: 50%;
   margin: auto;
@@ -34,4 +36,12 @@
   height: 50%;
   object-fit: contain;
   padding: 10px;
+}
+
+.buildcard__loading {
+  display: flex;
+}
+
+.buildcard__loading > * {
+  margin: auto;
 }

@@ -45,3 +45,11 @@
 .part__buyBtn{
   background-color: #3b3b53 !important;
 }
+
+.part__loading {
+  display: flex;
+}
+.part__loading > * {
+  margin: auto;
+  color: aliceblue;
+}

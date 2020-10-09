@@ -1,9 +1,17 @@
 import React from "react";
 import "./BuildCard.css";
 import Brain from "./Brain";
+import { ScaleLoader } from "react-spinners";
 
 function BuildCard({ docId }) {
   const build = Brain(docId);
+  if (build.case?.img === undefined) {
+    return (
+      <div className="buildcard buildcard__loading">
+        <ScaleLoader size={250} color={"#FF6A82"} />
+      </div>
+    );
+  }
   return (
     <div className="buildcard">
       <div className="buildcard__title">
