@@ -2,13 +2,13 @@
   background-color: #282838;
 }
 .build__body {
-  background-image : -linear-gradient(180deg, #1f0606, #412e57);
+  background-image : linear-gradient(180deg, #1f0606, #412e57);
   height: 100%;
   width: 100%;
 }
 
 .build__cards {
-  margin: auto;
+  margin : auto;
   width: 90%;
   height: 70%;
   display: flex;
