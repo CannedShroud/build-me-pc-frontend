@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import db from "./firebase";
 
-function Brain(id) {
+function Brain(id = "test", collection = "test") {
   const [build, setBuild] = useState({});
   useEffect(() => {
-    db.collection("builds")
+    db.collection(collection)
       .doc(id)
       .get()
       .then((doc) => {
@@ -17,7 +17,7 @@ function Brain(id) {
       .catch((error) => {
         console.log("Error getting document: ", error);
       });
-  }, [id]);
+  }, [id, collection]);
   return build;
 }
 

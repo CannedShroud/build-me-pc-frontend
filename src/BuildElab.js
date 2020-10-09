@@ -5,7 +5,7 @@ import Brain from "./Brain";
 
 function BuildElab({ id }) {
   const [buildId, setBuildId] = useState(id);
-  let build = Brain(buildId);
+  let build = Brain(buildId, "builds");
   useEffect(() => {
     setBuildId(id);
   }, [id]);

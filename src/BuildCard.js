@@ -4,7 +4,7 @@ import Brain from "./Brain";
 import { ScaleLoader } from "react-spinners";
 
 function BuildCard({ docId }) {
-  const build = Brain(docId);
+  const build = Brain(docId, "builds");
   if (build.case?.img === undefined) {
     return (
       <div className="buildcard buildcard__loading">

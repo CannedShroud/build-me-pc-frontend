@@ -1,17 +1,14 @@
 import React from "react";
 import "./Card.css";
 
-function Card() {
+function Card({ img, name }) {
   return (
     <div className="card">
       <div className="card__body">
-        <img
-          src="https://store-images.s-microsoft.com/image/apps.46452.13835473807186336.9510cd97-f71a-49b0-9e5c-0877f4bc9de3.611f3905-926e-456a-b549-6b68564b2769?mode=scale&q=90&h=300&w=200&background=%23FFFFFF"
-          alt=""
-        />
+        <img src={img} alt={name} className="card__image"/>
       </div>
       <div className="card__title">
-        <h3>WarZone</h3>
+        <h3>{name}</h3>
       </div>
     </div>
   );
