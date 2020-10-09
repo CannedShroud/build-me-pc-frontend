@@ -1,6 +1,6 @@
 .home {
-  background-color: #212121;
-  height: 100vh;
+  background-color: var(--primary);
+  height: 100%;
 }
 
 .home__body{

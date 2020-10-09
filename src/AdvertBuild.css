@@ -1,25 +1,27 @@
 .advertbuild {
-  background-color: #212121;
-  height: 50%;
-  display: flex;
-  justify-content: center;
-}
-
-.advertbuild__button {
-  background-color: rgb(0, 0, 71);
-  height: 50%;
-  width: 50%;
+  background-color: var(--secondary);
+  border-radius: 7px;
+  height: 50vh;
+  padding: 10px;
   margin: auto;
-  border: 1px solid rgb(172, 172, 172);
-  border-radius: 10px;
+  width: 90%;
+  display: flex;
+}
+.advertbuild__title span {
+  color: white;
+  font-weight: 300;
 }
 
-.advertbuild__button > * {
+.advertbuild__title h1 {
+  font-weight: 900;
+}
+
+.advertbuild__title {
+  flex: 0.25;
+  margin: auto;
   text-align: center;
-  color: thistle;
-  text-decoration: none;
 }
 
-.advertbuild:hover{
-  cursor:pointer;
+.advertbuild__summary {
+  display: flex;
 }
