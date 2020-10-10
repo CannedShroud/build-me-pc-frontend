@@ -1,8 +1,8 @@
 import React from "react";
-import "./Home.css";
-import Header from "./Header";
-import GameCards from "./GameCards";
-import AdvertBuild from "./AdvertBuild";
+import "../Styles/Home.css";
+import Header from "../Components/Header";
+import GameCards from "../Components/GameCards";
+import AdvertBuild from "../Components/AdvertBuild";
 
 function Home() {
   return (

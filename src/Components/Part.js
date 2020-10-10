@@ -1,7 +1,7 @@
 import { Button } from "@material-ui/core";
 import React from "react";
 import { ScaleLoader } from "react-spinners";
-import "./Part.css";
+import "../Styles/Part.css";
 
 function Part({
   part,

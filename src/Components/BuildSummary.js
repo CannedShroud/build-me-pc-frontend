@@ -1,6 +1,6 @@
 import React from "react";
-import "./BuildSummary.css";
-import Brain from "./Brain";
+import "../Styles/BuildSummary.css";
+import Brain from "../Logic/Brain";
 import { ScaleLoader } from "react-spinners";
 
 function BuildSummary({ docId }) {

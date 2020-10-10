@@ -1,7 +1,7 @@
 import React from "react";
-import "./GameCards.css";
-import Card from "./Card";
-import Brain from "./Brain";
+import "../Styles/GameCards.css";
+import Card from "../Components/Card";
+import Brain from "../Logic/Brain";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

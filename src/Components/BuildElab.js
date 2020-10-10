@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import "./BuildElab.css";
-import Part from "./Part";
-import Brain from "./Brain";
+import "../Styles/BuildElab.css";
+import Part from "../Components/Part";
+import Brain from "../Logic/Brain";
 
 function BuildElab({ id }) {
   const [buildId, setBuildId] = useState(id);

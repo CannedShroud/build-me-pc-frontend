@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "./Build.css";
-import Header from "./Header";
-import BuildCard from "./BuildCard";
-import BuildElab from "./BuildElab";
+import "../Styles/Build.css";
+import Header from "../Components/Header";
+import BuildCard from "../Components/BuildCard";
+import BuildElab from "../Components/BuildElab";
 
 function Build() {
   const [buildId, setBuildId] = useState("valueIntel");

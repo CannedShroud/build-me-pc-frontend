@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
-import "./AdvertBuild.css";
+import "../Styles/AdvertBuild.css";
 import { Link } from "react-router-dom";
-import BuildSummary from "./BuildSummary";
+import BuildSummary from "../Components/BuildSummary";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function AdvertBuild() {
   const [slidesNum, setSlidesNum] = useState(2);
-  console.log(window.innerWidth);
   useEffect(() => {
     if (window.innerWidth <= 1660) {
       setSlidesNum(1);

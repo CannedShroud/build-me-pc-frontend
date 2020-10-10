@@ -1,8 +1,8 @@
 import React from "react";
-import "./App.css";
-import Home from "./Home";
+import "./Styles/App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Build from "./Build";
+import Home from "./Page/Home";
+import Build from "./Page/Build";
 
 function App() {
   return (

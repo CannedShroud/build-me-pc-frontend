@@ -1,7 +1,7 @@
 import { IconButton } from "@material-ui/core";
 import { Brightness4Outlined, EmojiFlags, Computer } from "@material-ui/icons";
 import React from "react";
-import "./Header.css";
+import "../Styles/Header.css";
 
 function Header() {
   return (

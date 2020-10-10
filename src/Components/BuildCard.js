@@ -1,6 +1,6 @@
 import React from "react";
-import "./BuildCard.css";
-import Brain from "./Brain";
+import "../Styles/BuildCard.css";
+import Brain from "../Logic/Brain";
 import { ScaleLoader } from "react-spinners";
 
 function BuildCard({ docId }) {
