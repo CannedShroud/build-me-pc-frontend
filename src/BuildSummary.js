@@ -14,22 +14,28 @@ function BuildSummary({ docId }) {
   }
   return (
     <div className="buildsummary">
-      <div className="buildsummary__text">
-        <h1>{build.details?.name}</h1>
-        <div className="buildsummary__benchmarks">
-          <h4>Cinebench: <span>{build.benchmarks?.cinebench}</span></h4>
-          <h4>3D Mark: <span>{build.benchmarks?.threeDMarkTSpy}</span></h4>
+      <div className="buildsummary__details">
+        <div className="buildsummary__text">
+          <h1>{build.details?.name}</h1>
+          <div className="buildsummary__benchmarks">
+            <h4>
+              Cinebench: <span>{build.benchmarks?.cinebench}</span>
+            </h4>
+            <h4>
+              3D Mark: <span>{build.benchmarks?.threeDMarkTSpy}</span>
+            </h4>
+          </div>
+          <div className="buildsummary__price">
+            <h3>~$1000</h3>
+          </div>
         </div>
-        <div className="buildsummary__price">
-          <h3>~$1000</h3>
+        <div className="buildsummary__loadBars">
+          <h3>Warzone</h3>
+          <h3>Fortnite</h3>
+          <h3>GTA V</h3>
+          <h3>CyberPunk 2077</h3>
+          <h3>CS:GO</h3>
         </div>
-      </div>
-      <div className="buildsummary__loadBars">
-        <h3>Warzone</h3>
-        <h3>Fortnite</h3>
-        <h3>GTA V</h3>
-        <h3>CyberPunk 2077</h3>
-        <h3>CS:GO</h3>
       </div>
       <div className="buildsummary__image">
         <img src={build.case?.img} alt="" className="buildsummary__case" />
