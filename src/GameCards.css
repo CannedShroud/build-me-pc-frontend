@@ -4,4 +4,5 @@
   justify-content: space-evenly;
   overflow: hidden;
   flex-wrap: wrap;
+  min-height: 80vh;
 }

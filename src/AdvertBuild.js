@@ -19,6 +19,7 @@ function AdvertBuild() {
       <div className="advertbuild__summary">
         <BuildSummary docId="value"/>
         <BuildSummary docId="valueIntel"/>
+        <BuildSummary docId="streaming"/>
       </div>
     </div>
   );
