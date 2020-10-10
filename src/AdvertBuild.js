@@ -8,8 +8,9 @@ import "slick-carousel/slick/slick-theme.css";
 
 function AdvertBuild() {
   const [slidesNum, setSlidesNum] = useState(2);
+  console.log(window.innerWidth);
   useEffect(() => {
-    if (window.innerWidth <= 1300) {
+    if (window.innerWidth <= 1660) {
       setSlidesNum(1);
     }
   }, [slidesNum]);
@@ -27,6 +28,12 @@ function AdvertBuild() {
           <h1>
             Featured <span>Builds</span>
           </h1>
+          <h4>
+            Here are some <span>builds</span> which we recommend irrespective of
+            any parameters. <br />
+            These are one of the best <span>value</span> options in the market
+            as of now
+          </h4>
         </Link>
       </div>
       <div className="advertbuild__summary">

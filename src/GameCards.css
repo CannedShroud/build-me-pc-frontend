@@ -6,3 +6,11 @@
   flex-wrap: wrap;
   min-height: 80vh;
 }
+
+@media screen and (max-width: 500px) {
+  .gamecards {
+    display: initial;
+    justify-content: initial;
+    overflow: initial;
+  }
+}

@@ -5,6 +5,29 @@
 
 .advertbuild__title {
   text-align: center;
-  font-size: 40px;
-  margin: 40px;
+  font-size: 2em;
+  padding: 5%;
+}
+
+.advertbuild__title > * > h1 {
+  margin: 20px;
+}
+
+.advertbuild__title > * > h4 {
+  font-weight: 100;
+  font-size: 0.8em;
+}
+@media screen and (max-width: 500px) {
+  .advertbuild__title {
+    text-align: left;
+  }
+  .advertbuild__title > * > h1 {
+    margin: 0;
+    font-size: 1.4em;
+  }
+  .advertbuild__title > * > h4 {
+    font-weight: 100;
+    font-size: 0.7em;
+    line-break: 1.5;
+  }
 }

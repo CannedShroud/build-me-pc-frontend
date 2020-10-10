@@ -57,3 +57,15 @@
   border-top-right-radius: 5px;
   border-bottom-right-radius: 40px;
 }
+
+@media screen and (max-width: 1200px) {
+  .buildsummary__image {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .buildsummary {
+    flex-direction: column;
+  }
+}

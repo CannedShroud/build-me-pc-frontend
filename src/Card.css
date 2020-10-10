@@ -2,8 +2,8 @@
   transition: all 0.2s ease-in-out;
   display: flex;
   flex-direction: column;
-  width: 250px;
-  height: 400px;
+  width: calc(55vh * 0.625);
+  height:55vh;
   padding: 50px;
 }
 
@@ -12,7 +12,7 @@
 }
 
 .card__body {
-  box-shadow: 1px 1px 10px black;
+  box-shadow: 1px 1px 20px 1px rgb(88, 88, 88);
   height: 100%;
   width: 100%;
 }
