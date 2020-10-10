@@ -1,31 +1,10 @@
 .advertbuild {
-  background-color: var(--secondary);
-  border-radius: 7px;
-  padding: 10px;
-  margin: auto;
   width: 95%;
-  display: flex;
-  max-height: 400px;
-}
-.advertbuild__title span {
-  color: white;
-  font-weight: 300;
-}
-
-.advertbuild__title h1 {
-  font-weight: 900;
+  margin: auto;
 }
 
 .advertbuild__title {
-  margin: auto;
   text-align: center;
-  flex: 0.15;
-}
-
-.advertbuild__summary {
-  display: flex;
-  flex: 0.85;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  overflow: hidden;
+  font-size: 40px;
+  margin: 40px;
 }

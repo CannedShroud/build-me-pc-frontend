@@ -1,13 +1,9 @@
 .buildsummary {
   display: flex;
-  height: 90%;
-  width: 40%;
-  min-width: 500px;
-  min-height: 200px;
-  justify-content: space-evenly;
   background-color: #fff;
   border-radius: 10px;
-  margin: 20px;
+  margin: 40px;
+  height: 350px;
 }
 
 .buildsummary__loading > * {
@@ -42,15 +38,22 @@
 }
 
 .buildsummary__text {
+  width: 20%;
   padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: orange;
-  border-radius: 5px;
-  border-bottom-right-radius: 40px;
+  background-color: #212121;
+  color: white;
 }
-
-.buildsummary__text > h1 {
-  color: var(--primary);
+.buildsummary__loadBars {
+  width: 20%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(255, 136, 0);
+  color: white;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 40px;
 }
