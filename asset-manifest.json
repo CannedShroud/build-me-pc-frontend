@@ -1,22 +1,26 @@
 {
   "files": {
-    "main.css": "/build-me-pc-frontend/static/css/main.ed492008.chunk.css",
-    "main.js": "/build-me-pc-frontend/static/js/main.d4872341.chunk.js",
-    "main.js.map": "/build-me-pc-frontend/static/js/main.d4872341.chunk.js.map",
+    "main.css": "/build-me-pc-frontend/static/css/main.197b95e5.chunk.css",
+    "main.js": "/build-me-pc-frontend/static/js/main.de54be87.chunk.js",
+    "main.js.map": "/build-me-pc-frontend/static/js/main.de54be87.chunk.js.map",
     "runtime-main.js": "/build-me-pc-frontend/static/js/runtime-main.b93d4a8f.js",
     "runtime-main.js.map": "/build-me-pc-frontend/static/js/runtime-main.b93d4a8f.js.map",
-    "static/js/2.6613754d.chunk.js": "/build-me-pc-frontend/static/js/2.6613754d.chunk.js",
-    "static/js/2.6613754d.chunk.js.map": "/build-me-pc-frontend/static/js/2.6613754d.chunk.js.map",
+    "static/css/2.090b0489.chunk.css": "/build-me-pc-frontend/static/css/2.090b0489.chunk.css",
+    "static/js/2.b4757d89.chunk.js": "/build-me-pc-frontend/static/js/2.b4757d89.chunk.js",
+    "static/js/2.b4757d89.chunk.js.map": "/build-me-pc-frontend/static/js/2.b4757d89.chunk.js.map",
     "index.html": "/build-me-pc-frontend/index.html",
-    "precache-manifest.5c86e20023e869d0b1fb72580cf0f8f3.js": "/build-me-pc-frontend/precache-manifest.5c86e20023e869d0b1fb72580cf0f8f3.js",
+    "precache-manifest.23bc38a833da2117d473992c620efda2.js": "/build-me-pc-frontend/precache-manifest.23bc38a833da2117d473992c620efda2.js",
     "service-worker.js": "/build-me-pc-frontend/service-worker.js",
-    "static/css/main.ed492008.chunk.css.map": "/build-me-pc-frontend/static/css/main.ed492008.chunk.css.map",
-    "static/js/2.6613754d.chunk.js.LICENSE.txt": "/build-me-pc-frontend/static/js/2.6613754d.chunk.js.LICENSE.txt"
+    "static/css/2.090b0489.chunk.css.map": "/build-me-pc-frontend/static/css/2.090b0489.chunk.css.map",
+    "static/css/main.197b95e5.chunk.css.map": "/build-me-pc-frontend/static/css/main.197b95e5.chunk.css.map",
+    "static/js/2.b4757d89.chunk.js.LICENSE.txt": "/build-me-pc-frontend/static/js/2.b4757d89.chunk.js.LICENSE.txt",
+    "static/media/slick-theme.css": "/build-me-pc-frontend/static/media/slick.f97e3bbf.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.b93d4a8f.js",
-    "static/js/2.6613754d.chunk.js",
-    "static/css/main.ed492008.chunk.css",
-    "static/js/main.d4872341.chunk.js"
+    "static/css/2.090b0489.chunk.css",
+    "static/js/2.b4757d89.chunk.js",
+    "static/css/main.197b95e5.chunk.css",
+    "static/js/main.de54be87.chunk.js"
   ]
 }
