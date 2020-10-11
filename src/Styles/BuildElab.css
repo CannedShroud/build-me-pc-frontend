@@ -4,11 +4,15 @@
   padding: 40px;
 }
 
-.buildelab > h1 {
-  font-size: 45px;
+.buildelab__scores {
+  font-size: 1em;
 }
 
-.buildelab__titles{
+.buildelab__titles {
+  font-size: 1em;
+}
+
+.buildelab__titles {
   border-bottom: 1px solid white;
   margin-bottom: 30px;
 }
@@ -17,3 +21,17 @@
   margin-bottom: 30px;
 }
 
+@media screen and (max-width: 500px) {
+  .buildelab {
+    margin: 0;
+    padding: 20px;
+  }
+  .buildelab__titles {
+    font-size: 0.8em;
+    margin: 0;
+    line-height: 20px;
+  }
+  .buildelab__titles > * {
+    margin-bottom: 20px;
+  }
+}

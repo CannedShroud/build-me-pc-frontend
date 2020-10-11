@@ -16,10 +16,28 @@
 }
 
 .build__featured > h1 {
-  font-size: 50px;
+  font-size: 4em;
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
   color: white;
   text-align: center;
   padding: 40px;
+}
+
+@media screen and (max-width: 500px) {
+  .build__cards {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+  .build__featured > h1 {
+    font-size: 3em;
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+  }
 }
