@@ -1,0 +1,59 @@
+.estimator {
+  background-color: var(--primary);
+  height: 100vh;
+}
+.estimator__body {
+  display: flex;
+  margin: auto;
+  max-width: 1200px;
+  padding: 50px;
+}
+.estimator__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: white;
+}
+
+.estimator__intro {
+  margin: 0, 40px;
+  font-size: 1.5em;
+}
+.estimator__intro > * {
+  margin: 30px 0px;
+}
+.estimator__steps > ul {
+  list-style-type: none;
+}
+.estimator__step {
+  display: flex;
+  align-items: center;
+}
+
+.estimator__step > h3 {
+  padding: 20px;
+  font-weight: 300;
+}
+
+.estimator__index {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  padding: 5px;
+  background: #3b3b53;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  border: 1px solid white;
+}
+.estimator__caseImg > img {
+  height: 100%;
+}
+.estimator__getStartedBtn {
+  background-color: #3b3b53 !important;
+  width: 200px;
+  height: 60px;
+  border-radius: 50px !important;
+  margin: 40px 0 !important;
+}
+
