@@ -5,6 +5,7 @@ import {
   FormGroup,
   FormControlLabel,
   Button,
+  FormControl,
 } from "@material-ui/core";
 import { Autocomplete } from "@material-ui/lab";
 import React, { useState } from "react";
@@ -15,16 +16,15 @@ function Form(props) {
   const brain = Brain("games", "games");
   const games = brain.all;
   const [step, setStep] = useState(1);
-  const [inputFields, setInputFields] = useState([
-    {
-      budget: 0,
-      games: [],
-      extras: {
-        streaming: true,
-        videoEditing: true,
-      },
+  const [inputField, setInputField] = useState({
+    budget: 0,
+    games: [],
+    extras: {
+      streaming: true,
+      videoEditing: true,
+      coding: true,
     },
-  ]);
+  });
   return (
     <Container>
       <div className="form">
@@ -38,20 +38,28 @@ function Form(props) {
             </h3>
             <h4>Enter your budget</h4>
           </div>
-          <TextField
-            required="true"
-            label="Budget"
-            type="number"
-            defaultValue="1000"
-            onChange={(event) => console.log(event.target.value)}
-            InputLabelProps={{
-              shrink: true,
-            }}
-            variant="outlined"
-          />
-          <Button className="form__btn" onClick={() => setStep(2)}>
-            NEXT
-          </Button>
+          <FormControl>
+            <TextField
+              required="true"
+              label="Budget"
+              type="number"
+              defaultValue="1000"
+              onChange={(event) => {
+                inputField.budget = event.target.value;
+              }}
+              InputLabelProps={{
+                shrink: true,
+              }}
+              variant="outlined"
+            />
+            <Button
+              type="submit"
+              className="form__btn"
+              onClick={() => setStep(2)}
+            >
+              NEXT
+            </Button>
+          </FormControl>
         </div>
         <div
           className="form__games form__step"
@@ -92,15 +100,27 @@ function Form(props) {
             </h3>
             <h4>Pick your candy</h4>
           </div>
-          <FormControlLabel control={<Checkbox name="code" />} label="I Code" />
+          <FormControlLabel
+            control={<Checkbox name="code" />}
+            label="I Code"
+            onChange={(event) => {
+              inputField.extras.coding = event.target.checked;
+            }}
+          />
           <FormGroup>
             <FormControlLabel
               control={<Checkbox name="streamer" />}
               label="I Stream"
+              onChange={(event) => {
+                inputField.extras.streaming = event.target.checked;
+              }}
             />
             <FormControlLabel
               control={<Checkbox name="edit" />}
               label="I Edit Videos"
+              onChange={(event) => {
+                inputField.extras.videoEditing = event.target.checked;
+              }}
             />
           </FormGroup>
           <Button className="form__btn">NEXT</Button>
