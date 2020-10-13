@@ -6,11 +6,37 @@ import {
   FormControlLabel,
   Button,
   FormControl,
+  withStyles,
 } from "@material-ui/core";
 import { Autocomplete } from "@material-ui/lab";
 import React, { useState, useEffect } from "react";
 import "../Styles/Form.css";
 import Brain from "../Logic/Brain";
+
+const CustomTextField = withStyles({
+  root: {
+    "& label.MuiInputLabel-root": {
+      color: "var(--secondary)",
+      "&.Mui-focused": {
+        color: "white",
+      },
+    },
+    "& .MuiOutlinedInput-root": {
+      backgroundColor: "#3B3B53",
+      color: "white",
+      "& fieldset": {
+        borderColor: "white",
+        border: "2px solid",
+      },
+      "&:hover fieldset": {
+        borderColor: "white",
+      },
+      "&.Mui-focused fieldset": {
+        borderColor: "var(--secondary)",
+      },
+    },
+  },
+})(TextField);
 
 function Form() {
   const [step, setStep] = useState(1);
@@ -51,8 +77,7 @@ function Form() {
             <h4>Enter your budget</h4>
           </div>
           <FormControl>
-            <TextField
-              required={true}
+            <CustomTextField
               label="Budget"
               type="number"
               defaultValue="1000"
@@ -94,9 +119,8 @@ function Form() {
             options={games}
             getOptionLabel={(option) => option.title}
             style={{ width: 300 }}
-            required={true}
             renderInput={(params) => (
-              <TextField {...params} label="Game" variant="outlined" />
+              <CustomTextField {...params} label="Game" variant="outlined" />
             )}
           />
           <Button
@@ -145,7 +169,7 @@ function Form() {
             />
           </FormGroup>
           <Button className="form__btn" onClick={() => console.log(inputField)}>
-            NEXT
+            SUBMIT!
           </Button>
         </div>
       </div>
