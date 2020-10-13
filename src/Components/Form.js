@@ -8,7 +8,7 @@ import {
   FormControl,
 } from "@material-ui/core";
 import { Autocomplete } from "@material-ui/lab";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../Styles/Form.css";
 import Brain from "../Logic/Brain";
 
@@ -29,9 +29,14 @@ function Form() {
     { title: "Fortnite", id: "fortnite" },
   ];
 
-  // const brain = Brain("games", "games");
-  // const games = [brain.all];
-  // const [value, setValue] = useState(dummyGames);
+  const brain = Brain("games", "games");
+  const [games, setGames] = useState(dummyGames);
+  useEffect(() => {
+    if (brain.all !== undefined) {
+      setGames(brain.all);
+    }
+  }, [brain]);
+  const [value, setValue] = useState(games[0]);
 
   return (
     <Container>
@@ -83,12 +88,11 @@ function Form() {
             <h4>Pick your favourite Game</h4>
           </div>
           <Autocomplete
-            // value={dummyGames}
-            // onChange={(event, newValue) => {
-            //   setValue(newValue);
-            //   console.log(value);
-            // }}
-            options={dummyGames}
+            value={value}
+            onChange={(event, newValue) => {
+              setValue(newValue);
+            }}
+            options={games}
             getOptionLabel={(option) => option.title}
             style={{ width: 300 }}
             required={true}
@@ -99,7 +103,7 @@ function Form() {
           <Button
             className="form__btn"
             onClick={() => {
-              // gamesSelected.push(value);
+              gamesSelected.push(value);
               setStep(3);
             }}
           >
