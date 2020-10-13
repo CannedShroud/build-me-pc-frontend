@@ -12,19 +12,27 @@ import React, { useState } from "react";
 import "../Styles/Form.css";
 import Brain from "../Logic/Brain";
 
-function Form(props) {
-  const brain = Brain("games", "games");
-  const games = brain.all;
+function Form() {
   const [step, setStep] = useState(1);
   const [inputField, setInputField] = useState({
     budget: 0,
-    games: [],
+    games: [{ title: "", id: "" }],
     extras: {
-      streaming: true,
-      videoEditing: true,
-      coding: true,
+      streaming: false,
+      videoEditing: false,
+      coding: false,
     },
   });
+  let gamesSelected = [];
+  const dummyGames = [
+    { title: "Warzone", id: "warzone" },
+    { title: "Fortnite", id: "fortnite" },
+  ];
+
+  // const brain = Brain("games", "games");
+  // const games = [brain.all];
+  // const [value, setValue] = useState(dummyGames);
+
   return (
     <Container>
       <div className="form">
@@ -40,7 +48,7 @@ function Form(props) {
           </div>
           <FormControl>
             <TextField
-              required="true"
+              required={true}
               label="Budget"
               type="number"
               defaultValue="1000"
@@ -75,16 +83,26 @@ function Form(props) {
             <h4>Pick your favourite Game</h4>
           </div>
           <Autocomplete
-            id="combo-box-demo"
-            options={games}
+            // value={dummyGames}
+            // onChange={(event, newValue) => {
+            //   setValue(newValue);
+            //   console.log(value);
+            // }}
+            options={dummyGames}
             getOptionLabel={(option) => option.title}
             style={{ width: 300 }}
-            required="true"
+            required={true}
             renderInput={(params) => (
               <TextField {...params} label="Game" variant="outlined" />
             )}
           />
-          <Button className="form__btn" onClick={() => setStep(3)}>
+          <Button
+            className="form__btn"
+            onClick={() => {
+              // gamesSelected.push(value);
+              setStep(3);
+            }}
+          >
             NEXT
           </Button>
         </div>
@@ -123,7 +141,9 @@ function Form(props) {
               }}
             />
           </FormGroup>
-          <Button className="form__btn">NEXT</Button>
+          <Button className="form__btn" onClick={() => console.log(inputField)}>
+            NEXT
+          </Button>
         </div>
       </div>
     </Container>
