@@ -16,14 +16,13 @@ function Form() {
   const [step, setStep] = useState(1);
   const [inputField, setInputField] = useState({
     budget: 0,
-    games: [{ title: "", id: "" }],
+    games: [],
     extras: {
       streaming: false,
       videoEditing: false,
       coding: false,
     },
   });
-  let gamesSelected = [];
   const dummyGames = [
     { title: "Warzone", id: "warzone" },
     { title: "Fortnite", id: "fortnite" },
@@ -103,7 +102,7 @@ function Form() {
           <Button
             className="form__btn"
             onClick={() => {
-              gamesSelected.push(value);
+              inputField.games.push(value);
               setStep(3);
             }}
           >
