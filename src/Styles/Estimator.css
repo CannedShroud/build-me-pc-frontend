@@ -1,12 +1,14 @@
 .estimator {
   background-color: var(--primary);
-  height: 100vh;
+  height: 100%;
 }
 .estimator__body {
-  display: flex;
   margin: auto;
   max-width: 1200px;
   padding: 50px;
+}
+.estimator__top {
+  display: flex;
 }
 .estimator__content {
   display: flex;
@@ -56,4 +58,6 @@
   border-radius: 50px !important;
   margin: 40px 0 !important;
 }
-
+.estimator__form {
+  margin: 100px 0;
+}

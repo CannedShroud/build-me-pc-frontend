@@ -1,0 +1,24 @@
+.form {
+  color: white;
+}
+.MuiContainer-root {
+  padding: 0 !important;
+}
+.form__step {
+  margin: 7% 0;
+  display: flex;
+  flex-direction: column;
+}
+.form__info {
+  margin-bottom: 3%;
+}
+.form__info > * {
+  margin: 20px 0;
+}
+.form__btn {
+  background-color: #3b3b53 !important;
+  width: 200px;
+  height: 60px;
+  border-radius: 50px !important;
+  margin: 10px 0 !important;
+}
