@@ -80,7 +80,7 @@ function Form() {
             <CustomTextField
               label="Budget"
               type="number"
-              defaultValue="1000"
+              style={{ width: 300 }}
               onChange={(event) => {
                 inputField.budget = event.target.value;
               }}

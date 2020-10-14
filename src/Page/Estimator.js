@@ -48,7 +48,6 @@ function Estimator() {
               </ul>
             </div>
             <Button
-              href="#estimator__form"
               className="estimator__getStartedBtn"
             >
               GET STARTED
