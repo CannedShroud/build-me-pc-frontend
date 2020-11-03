@@ -1,13 +1,12 @@
 import React from "react";
 import "../Styles/GameCards.css";
 import Card from "../Components/Card";
-import Brain from "../Logic/Brain";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function GameCards() {
-  const games = Brain("games", "games");
+  const games = {};
   var carouselSettings = {
     dots: true,
     infinite: true,

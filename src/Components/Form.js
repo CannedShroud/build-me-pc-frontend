@@ -11,7 +11,6 @@ import {
 import { Autocomplete } from "@material-ui/lab";
 import React, { useState, useEffect } from "react";
 import "../Styles/Form.css";
-import Brain from "../Logic/Brain";
 import axios from "../Logic/axios";
 
 const CustomTextField = withStyles({
@@ -55,13 +54,14 @@ function Form() {
     { title: "Fortnite", id: "fortnite" },
   ];
 
-  const brain = Brain("games", "games");
-  const [games, setGames] = useState(dummyGames);
-  useEffect(() => {
-    if (brain.all !== undefined) {
-      setGames(brain.all);
-    }
-  }, [brain]);
+  // const brain = Brain("games", "games");
+  // const [games, setGames] = useState(dummyGames);
+  // useEffect(() => {
+  //   if (brain.all !== undefined) {
+  //     setGames(brain.all);
+  //   }
+  // }, [brain]);
+  const games = [];
   const [value, setValue] = useState(games[0]);
 
   const handleSubmit = (e, from) => {

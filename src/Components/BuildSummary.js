@@ -1,11 +1,11 @@
 import React from "react";
 import "../Styles/BuildSummary.css";
-import Brain from "../Logic/Brain";
+import Gate from "../Logic/Gate";
 import { ScaleLoader } from "react-spinners";
 
-function BuildSummary({ docId }) {
-  const build = Brain(docId, "builds");
-  if (build.case?.img === undefined) {
+function BuildSummary({ buildId }) {
+  const { buildDetails } = Gate(buildId);
+  if (buildDetails?.case?.img === undefined) {
     return (
       <div className="buildsummary buildsummary__loading">
         <ScaleLoader size={250} color={"#FF6A82"} />
@@ -16,13 +16,13 @@ function BuildSummary({ docId }) {
     <div className="buildsummary">
       <div className="buildsummary__details">
         <div className="buildsummary__text">
-          <h1>{build.details?.name}</h1>
+          <h1>{buildDetails?.details?.name}</h1>
           <div className="buildsummary__benchmarks">
             <h4>
-              Cinebench: <span>{build.benchmarks?.cinebench}</span>
+              Cinebench: <span>{buildDetails?.benchmarks?.cinebench}</span>
             </h4>
             <h4>
-              3D Mark: <span>{build.benchmarks?.threeDMarkTSpy}</span>
+              3D Mark: <span>{buildDetails?.benchmarks?.threeDMarkTSpy}</span>
             </h4>
           </div>
           <div className="buildsummary__price">
@@ -38,10 +38,10 @@ function BuildSummary({ docId }) {
         </div>
       </div>
       <div className="buildsummary__image">
-        <img src={build.case?.img} alt="" className="buildsummary__case" />
+        <img src={buildDetails?.case?.img} alt="" className="buildsummary__case" />
         <div className="buildsummary__partsImg">
-          <img src={build.cpu?.img} alt="" />
-          <img src={build.gpu?.img} alt="" />
+          <img src={buildDetails?.cpu?.img} alt="" />
+          <img src={buildDetails?.gpu?.img} alt="" />
         </div>
       </div>
     </div>
