@@ -1,25 +1,26 @@
 import React, { useEffect, useState } from "react";
 import "../Styles/BuildElab.css";
 import Part from "../Components/Part";
-import Brain from "../Logic/Brain";
+import Gate from "../Logic/Gate";
 
 function BuildElab({ id }) {
   const [buildId, setBuildId] = useState(id);
-  let build = Brain(buildId, "builds");
+  let { buildDetails } = Gate(buildId);
   useEffect(() => {
     setBuildId(id);
   }, [id]);
-    return (
+  return (
     <div className="buildelab">
       <div className="buildelab__titles">
-        <h1>{build.details?.name}</h1>
+        <h1>{buildDetails?.details?.name}</h1>
         <div className="buildelab__scores">
           <h2>Scores</h2>
           <h3>
-            Cinebench: <span>{build.benchmarks?.cinebench}</span>
+            Cinebench: <span>{buildDetails?.benchmarks?.cinebench}</span>
           </h3>
           <h3>
-            3D Mark(Time Spy): <span>{build.benchmarks?.threeDMarkTSpy}</span>
+            3D Mark(Time Spy):{" "}
+            <span>{buildDetails?.benchmarks?.threeDMarkTSpy}</span>
           </h3>
         </div>
         <h2>Part List</h2>
@@ -27,85 +28,87 @@ function BuildElab({ id }) {
       <div className="buildelab__parts">
         <Part
           part="CPU"
-          img={build.cpu?.img}
-          name={build.cpu?.name}
+          img={buildDetails?.cpu?.img}
+          name={buildDetails?.cpu?.name}
           title1="Compute:"
-          detail1={`${build.cpu?.cores}C/${
-            build.cpu?.smt ? build.cpu?.cores * 2 : build.cpu?.cores
+          detail1={`${buildDetails?.cpu?.cores}C/${
+            buildDetails?.cpu?.smt
+              ? buildDetails?.cpu?.cores * 2
+              : buildDetails?.cpu?.cores
           }T`}
           title2="Clockspeed:"
-          detail2={`${build.cpu?.clocks} GHz`}
-          link={build.cpu?.link}
-          company={build.cpu?.company}
-          price={build.cpu?.price}
+          detail2={`${buildDetails?.cpu?.clocks} GHz`}
+          link={buildDetails?.cpu?.link}
+          company={buildDetails?.cpu?.company}
+          price={buildDetails?.cpu?.price}
         />
         <Part
           part="Motherboard"
-          name={build.mbd?.name}
+          name={buildDetails?.mbd?.name}
           title1="Sata Ports:"
-          detail1={build.mbd?.sataports}
+          detail1={buildDetails?.mbd?.sataports}
           title2="Ram Slots:"
-          detail2={build.mbd?.ramslots}
-          price={build.mbd?.price}
-          link={build.mbd?.link}
-          company={build.mbd?.company}
-          img={build.mbd?.img}
+          detail2={buildDetails?.mbd?.ramslots}
+          price={buildDetails?.mbd?.price}
+          link={buildDetails?.mbd?.link}
+          company={buildDetails?.mbd?.company}
+          img={buildDetails?.mbd?.img}
         />
         <Part
           part="RAM"
-          name={build.dram?.name}
+          name={buildDetails?.dram?.name}
           title1="Size:"
-          detail1={`${build.dram?.size} GB (${build.dram?.config})`}
+          detail1={`${buildDetails?.dram?.size} GB (${buildDetails?.dram?.config})`}
           title2="Speed:"
-          detail2={`${build.dram?.speed} Mhz`}
-          price={build.dram?.price}
-          link={build.dram?.link}
-          company={build.dram?.company}
-          img={build.dram?.img}
+          detail2={`${buildDetails?.dram?.speed} Mhz`}
+          price={buildDetails?.dram?.price}
+          link={buildDetails?.dram?.link}
+          company={buildDetails?.dram?.company}
+          img={buildDetails?.dram?.img}
         />
         <Part
           part="Storage"
-          name={build.ssd?.name}
+          name={buildDetails?.ssd?.name}
           title1="Capacity:"
-          detail1={`${build.ssd?.capacity} GB`}
+          detail1={`${buildDetails?.ssd?.capacity} GB`}
           title2="Type:"
-          detail2={build.ssd?.type}
-          price={build.ssd?.price}
-          link={build.ssd?.link}
-          company={build.ssd?.company}
-          img={build.ssd?.img}
+          detail2={buildDetails?.ssd?.type}
+          price={buildDetails?.ssd?.price}
+          link={buildDetails?.ssd?.link}
+          company={buildDetails?.ssd?.company}
+          img={buildDetails?.ssd?.img}
         />
         <Part
           part="GPU"
-          name={build.gpu?.name}
+          name={buildDetails?.gpu?.name}
           title1="VRAM:"
-          detail1={`${build.gpu?.vram} GB`}
+          detail1={`${buildDetails?.gpu?.vram} GB`}
           title2="Bus"
-          detail2={`${build.gpu?.bus} bit`}
-          price={build.gpu?.price}
-          link={build.gpu?.link}
-          company={build.gpu?.aib}
-          img={build.gpu?.img}
+          detail2={`${buildDetails?.gpu?.bus} bit`}
+          price={buildDetails?.gpu?.price}
+          link={buildDetails?.gpu?.link}
+          company={buildDetails?.gpu?.aib}
+          img={buildDetails?.gpu?.img}
         />
         <Part
           part="Case"
-          name={build.case?.name}
-          price={build.case?.price}
-          link={build.case?.link}
-          company={build.case?.company}
-          img={build.case?.img}
+          name={buildDetails?.case?.name}
+          price={buildDetails?.case?.price}
+          link={buildDetails?.case?.link}
+          company={buildDetails?.case?.company}
+          img={buildDetails?.case?.img}
         />
         <Part
           part="PowerSupply"
-          name={build.psu?.name}
+          name={buildDetails?.psu?.name}
           title1="Wattage:"
-          detail1={`${build.psu?.wattage}W`}
+          detail1={`${buildDetails?.psu?.wattage}W`}
           title2="Efficiency:"
-          detail2={build.psu?.rating}
-          price={build.psu?.price}
-          link={build.psu?.link}
-          company={build.psu?.company}
-          img={build.psu?.img}
+          detail2={buildDetails?.psu?.rating}
+          price={buildDetails?.psu?.price}
+          link={buildDetails?.psu?.link}
+          company={buildDetails?.psu?.company}
+          img={buildDetails?.psu?.img}
         />
       </div>
     </div>

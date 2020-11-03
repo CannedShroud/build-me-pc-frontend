@@ -5,7 +5,7 @@ import BuildCard from "../Components/BuildCard";
 import BuildElab from "../Components/BuildElab";
 
 function Build() {
-  const [buildId, setBuildId] = useState("valueIntel");
+  const [buildId, setBuildId] = useState("value");
   return (
     <div className="build">
       <div className="build__header">
